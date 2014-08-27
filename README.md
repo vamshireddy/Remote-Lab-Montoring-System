@@ -20,3 +20,9 @@ Making the lab maintenence easy!
 * When a request hits the server, it processes in the background, making a connection with the desired Lab Computer ( which has daemon running ) and gets the stats,pics etc.
 * These obtained stats on the server are sent back to the Faculty member on the same HTTP connection.
 * During this processing time, the website should make the user know that its processing and he/she should wait untill its done.
+
+## Benefits
+
+* HOD can browse what students are currently working on.
+* Faculty can see the progress of a student in a lab.
+* Can remotely shutdown PC's if they are on.
