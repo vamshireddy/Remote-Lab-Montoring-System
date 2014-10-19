@@ -1,0 +1,10 @@
+C:\Users\Student\Desktop\b10\week2\labMonitoring\labMonitoring\bin\labMonitoring.dll
+C:\Users\Student\Desktop\b10\week2\labMonitoring\labMonitoring\bin\labMonitoring.pdb
+C:\Users\Student\Desktop\b10\week2\labMonitoring\labMonitoring\obj\Debug\labMonitoring.csprojResolveAssemblyReference.cache
+C:\Users\Student\Desktop\b10\week2\labMonitoring\labMonitoring\obj\Debug\labMonitoring.dll
+C:\Users\Student\Desktop\b10\week2\labMonitoring\labMonitoring\obj\Debug\labMonitoring.pdb
+C:\Users\Student\Desktop\Vamshi\labMonitoring\labMonitoring\bin\labMonitoring.dll
+C:\Users\Student\Desktop\Vamshi\labMonitoring\labMonitoring\bin\labMonitoring.pdb
+C:\Users\Student\Desktop\Vamshi\labMonitoring\labMonitoring\obj\Debug\labMonitoring.csprojResolveAssemblyReference.cache
+C:\Users\Student\Desktop\Vamshi\labMonitoring\labMonitoring\obj\Debug\labMonitoring.dll
+C:\Users\Student\Desktop\Vamshi\labMonitoring\labMonitoring\obj\Debug\labMonitoring.pdb
