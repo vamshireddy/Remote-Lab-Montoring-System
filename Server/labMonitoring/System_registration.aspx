@@ -27,11 +27,11 @@
         <br />
         <asp:Label ID="Label1" runat="server" Text="Select Lab"></asp:Label>
         <br />
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="21px" Width="73px">
+        <asp:DropDownList ID="DropDownList1" runat="server" Height="21px" Width="73px">
         </asp:DropDownList>
         <br />
         Select Computer<br />
-        <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True">
+        <asp:DropDownList ID="DropDownList2" runat="server">
         </asp:DropDownList>
         <br />
         <asp:Label ID="Label2" runat="server" Text="MAC Address"></asp:Label>

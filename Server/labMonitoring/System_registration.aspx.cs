@@ -40,7 +40,7 @@ namespace labMonitoring
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("WebForm2.aspx");
+            Response.Redirect("System_registration_succesfull.aspx");
         }
 
         protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -60,6 +60,7 @@
     <Content Include="Admin_login.aspx" />
     <Content Include="Faculty_Home.aspx" />
     <Content Include="Faculty_login.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Main.aspx" />
     <Content Include="Output_Page.aspx" />
     <Content Include="Unauthorized_access.aspx" />
@@ -89,6 +90,9 @@
     <Compile Include="Faculty_login.aspx.designer.cs">
       <DependentUpon>Faculty_login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -104,6 +108,7 @@
       <DependentUpon>Output_Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="serverd.cs" />
     <Compile Include="System_registration.aspx.cs">
       <DependentUpon>System_registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -8,3 +8,9 @@ C:\Users\Student\Desktop\Vamshi\labMonitoring\labMonitoring\bin\labMonitoring.pd
 C:\Users\Student\Desktop\Vamshi\labMonitoring\labMonitoring\obj\Debug\labMonitoring.csprojResolveAssemblyReference.cache
 C:\Users\Student\Desktop\Vamshi\labMonitoring\labMonitoring\obj\Debug\labMonitoring.dll
 C:\Users\Student\Desktop\Vamshi\labMonitoring\labMonitoring\obj\Debug\labMonitoring.pdb
+D:\VS\Remote-Lab-Montoring-System-master\Remote-Lab-Montoring-System-master\labMonitoring\bin\labMonitoring.dll.config
+D:\VS\Remote-Lab-Montoring-System-master\Remote-Lab-Montoring-System-master\labMonitoring\bin\labMonitoring.dll
+D:\VS\Remote-Lab-Montoring-System-master\Remote-Lab-Montoring-System-master\labMonitoring\bin\labMonitoring.pdb
+D:\VS\Remote-Lab-Montoring-System-master\Remote-Lab-Montoring-System-master\labMonitoring\obj\Debug\labMonitoring.csprojResolveAssemblyReference.cache
+D:\VS\Remote-Lab-Montoring-System-master\Remote-Lab-Montoring-System-master\labMonitoring\obj\Debug\labMonitoring.dll
+D:\VS\Remote-Lab-Montoring-System-master\Remote-Lab-Montoring-System-master\labMonitoring\obj\Debug\labMonitoring.pdb
