@@ -60,7 +60,6 @@ namespace labMonitoring
 
             //get MAC address 
 
-
             while (running)
             {
                 ns.Read(arr, 0, arr.Length);
@@ -81,7 +80,6 @@ namespace labMonitoring
             IPAddress ipAddress = Dns.Resolve("localhost").AddressList[0];
             TcpListener server_soc = new TcpListener(ipAddress, 8002);
             server_soc.Start();
-
             while( true )
             {
                 TcpClient clientSocket = server_soc.AcceptTcpClient();

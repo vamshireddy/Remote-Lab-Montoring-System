@@ -17,6 +17,11 @@ namespace labMonitoring
         public TcpClient client_soc;
         public String name;
 
+        public ClientNode(String name)
+        {
+            this.name = name;
+        }
+
         public string getMACAddress()
         {
             return mac.ToString();

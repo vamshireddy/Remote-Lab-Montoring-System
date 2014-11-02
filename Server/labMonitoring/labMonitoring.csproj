@@ -67,6 +67,7 @@
     <Content Include="Web.config" />
     <Content Include="System_registration.aspx" />
     <Content Include="System_registration_succesfull.aspx" />
+    <Content Include="Admin_Home.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin_login.aspx.cs">
@@ -76,6 +77,8 @@
     <Compile Include="Admin_login.aspx.designer.cs">
       <DependentUpon>Admin_login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ClientNode.cs" />
+    <Compile Include="ClientNodeList.cs" />
     <Compile Include="Faculty_Home.aspx.cs">
       <DependentUpon>Faculty_Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -93,6 +96,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LabList.cs" />
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +133,13 @@
     </Compile>
     <Compile Include="Unauthorized_access.aspx.designer.cs">
       <DependentUpon>Unauthorized_access.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Home.aspx.cs">
+      <DependentUpon>Admin_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Home.aspx.designer.cs">
+      <DependentUpon>Admin_Home.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

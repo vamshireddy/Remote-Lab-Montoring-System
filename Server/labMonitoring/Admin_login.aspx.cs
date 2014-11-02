@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace labMonitoring
 {
@@ -23,18 +25,31 @@ namespace labMonitoring
         {
             String username = un.Text;
             String password = pass.Text;
+            /*
+             * Now validate the username and password */
+            SqlConnection con = new SqlConnection("data source=.;initial catalog=vamshi;user id=sa;password=sajalsuraj;integrated security=true");
+            SqlCommand cmd = new SqlCommand("select adminID from AdminLogin where adminID=@uname and password=@paswd",con);
+            con.Open();
+            cmd.Parameters.AddWithValue("uname", username);
+            cmd.Parameters.AddWithValue("paswd", password);
 
-            if (username == "vamshi" && password == "reddy")
+            SqlDataReader reader =  cmd.ExecuteReader();
+
+            if (reader.Read() == false)
             {
-                Session["UserAuthentication"] = username;
-                Session["homepage"] = "WebForm1.aspx";
-                Response.Redirect("WebForm1.aspx");
+                /*
+                 * Invalid username and password */
+                Label2.Visible = true;
             }
             else
             {
-                Label2.Visible = true;
+                /*
+                 * User name and password are correct
+                 */
+                Session["sessID"] = username;
+                Response.Redirect("Admin_Home.aspx");
             }
-
+            con.Close();
         }
     }
 }

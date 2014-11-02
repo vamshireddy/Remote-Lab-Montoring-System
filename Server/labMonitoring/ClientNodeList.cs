@@ -10,15 +10,15 @@ namespace labMonitoring
     public class ClientNodeList
     {
         public String lab_name;
-        private List<ClientNode> list;
+        public List<ClientNode> list;
         private ReaderWriterLock mutex;
 
-        public  ClientNodeList()
+        public  ClientNodeList(string name)
         {
+            lab_name = name;
             list = new List<ClientNode>();
             mutex = new ReaderWriterLock();
         }
-
         /*
          * This is called by the ASP.NET page 
          */

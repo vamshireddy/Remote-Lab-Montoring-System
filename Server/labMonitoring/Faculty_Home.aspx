@@ -11,18 +11,22 @@
     <div>
     
         <br />
+        <asp:Label ID="Label2" runat="server" Font-Size="30pt" Text="Select your LAB"></asp:Label>
         <br />
-        Select the LAB:<br />
-        <asp:DropDownList ID="DropDownList1" runat="server" Height="21px" Width="154px">
+        <br />
+        <asp:DropDownList ID="DropDownList1" runat="server" Height="47px" Width="312px" Font-Size="20pt" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="true">
         </asp:DropDownList>
         <br />
         <br />
         Select the Computer<br />
-        <asp:DropDownList ID="DropDownList2" runat="server" Height="16px" Width="156px">
+        <asp:DropDownList ID="DropDownList2" runat="server" Height="50px" Width="312px" Font-Size="20pt">
         </asp:DropDownList>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Height="26px" OnClick="Button1_Click" Text="Submit" Width="74px" />
+        <asp:Label ID="Label1" runat="server" Font-Size="20pt" Text="There are no computers logged into the system"></asp:Label>
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" Height="60px" OnClick="Button1_Click" Text="Submit" Width="130px" Font-Size="20pt" />
     
     </div>
     </form>

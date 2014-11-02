@@ -14,3 +14,8 @@ D:\VS\Remote-Lab-Montoring-System-master\Remote-Lab-Montoring-System-master\labM
 D:\VS\Remote-Lab-Montoring-System-master\Remote-Lab-Montoring-System-master\labMonitoring\obj\Debug\labMonitoring.csprojResolveAssemblyReference.cache
 D:\VS\Remote-Lab-Montoring-System-master\Remote-Lab-Montoring-System-master\labMonitoring\obj\Debug\labMonitoring.dll
 D:\VS\Remote-Lab-Montoring-System-master\Remote-Lab-Montoring-System-master\labMonitoring\obj\Debug\labMonitoring.pdb
+C:\Users\SAJAL SURAJ\Desktop\Server\labMonitoring\bin\labMonitoring.dll
+C:\Users\SAJAL SURAJ\Desktop\Server\labMonitoring\bin\labMonitoring.pdb
+C:\Users\SAJAL SURAJ\Desktop\Server\labMonitoring\obj\Debug\labMonitoring.csprojResolveAssemblyReference.cache
+C:\Users\SAJAL SURAJ\Desktop\Server\labMonitoring\obj\Debug\labMonitoring.dll
+C:\Users\SAJAL SURAJ\Desktop\Server\labMonitoring\obj\Debug\labMonitoring.pdb

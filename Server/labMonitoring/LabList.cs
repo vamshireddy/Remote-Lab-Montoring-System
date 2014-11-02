@@ -8,7 +8,7 @@ namespace labMonitoring
 {
     public class LabList
     {
-        List<ClientNodeList> lab_list;
+        public List<ClientNodeList> lab_list;
         ReaderWriterLock mutex;
 
         public LabList()
@@ -19,13 +19,16 @@ namespace labMonitoring
 
         public void addLab(String name) {
             mutex.AcquireWriterLock(60000);
-            ClientNodeList tmp = new ClientNodeList();
+
+            ClientNodeList tmp = new ClientNodeList(name);
             lab_list.Add(tmp);
+            
             mutex.ReleaseLock();
         }
 
         public ClientNodeList getLabComputers(String name){
             mutex.AcquireReaderLock(81640);
+            
             foreach (ClientNodeList list in lab_list)
             {
                 if (list.lab_name == name)
@@ -33,6 +36,7 @@ namespace labMonitoring
                     return list;
                 }
             }
+            
             mutex.ReleaseLock();
             return null;
         }

@@ -34,8 +34,9 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="pass_faculty" Display="Dynamic" ErrorMessage="Password is Required!" Font-Size="16pt" ForeColor="#FF3300"></asp:RequiredFieldValidator>
     
     </div>
-        <p>
-            &nbsp;</p>
+        <p style="margin-left: 320px">
+            <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="20pt" ForeColor="Red" Text="Invalid Login Details"></asp:Label>
+        </p>
     </form>
 </body>
 </html>
