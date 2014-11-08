@@ -15,7 +15,7 @@ namespace labMonitoring
 
         public  ClientNodeList(string name)
         {
-            lab_name = name;
+            lab_name = name.Trim();
             list = new List<ClientNode>();
             mutex = new ReaderWriterLock();
         }
@@ -42,7 +42,29 @@ namespace labMonitoring
         {
             mutex.AcquireWriterLock(60000);
 
-            list.Add(n);
+            ClientNode found_node = null;
+
+            foreach (ClientNode node in list)
+            {
+                // Check if node is already there
+                if (node.mac.Equals(n.mac))
+                {
+                    found_node = node;
+                }
+            }
+
+            // If node is already present, then overwrite the values
+            if (found_node != null)
+            {
+                found_node.name = n.name;
+                found_node.mac = n.mac;
+                found_node.last_time = DateTime.Now;
+                found_node.node_mode = 0;
+            }
+            else
+            {
+                list.Add(n);
+            }
 
             mutex.ReleaseWriterLock();
         }

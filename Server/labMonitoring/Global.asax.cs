@@ -16,8 +16,8 @@ using System.Timers;
 using System.Drawing;
 using System.IO;
 using System.Drawing.Imaging;
-using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace labMonitoring
 {
@@ -25,26 +25,41 @@ namespace labMonitoring
     {
         public static LabList labListGlobal = new LabList();
 
-        private void populateLabs()
+        private static bool isPresent(string labname)
         {
-            SqlConnection con = new SqlConnection("data source=.;initial catalog=vamshi;user id=sa;password=sajalsuraj;integrated security=true");
-            SqlCommand cmd = new SqlCommand("select labID from Computers group by labID", con);
+            foreach( ClientNodeList l in labListGlobal.lab_list )
+            {
+                if (l.lab_name.Equals(labname))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static void populateLabs()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn_str"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("select labID from Computer group by labID", con);
             con.Open();
 
             SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
             {
-                labListGlobal.addLab((string)reader["labID"]);
+                if (!isPresent((string)reader["labID"]))
+                {
+                    labListGlobal.addLab((string)reader["labID"]);
+                }
             }
             con.Close();
-
         }
         protected void Application_Start(object sender, EventArgs e)
         {  
             Thread th = new Thread(new ThreadStart(serverd.Run));
             th.Start();
             populateLabs();
+            ClientNodeList list = labListGlobal.getLabComputers("CG");
         }
 
         protected void Session_Start(object sender, EventArgs e)

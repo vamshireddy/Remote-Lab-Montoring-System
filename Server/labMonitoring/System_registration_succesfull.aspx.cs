@@ -17,16 +17,16 @@ namespace labMonitoring
         protected void Button1_Click(object sender, EventArgs e)
         {
             
-            if (Session["homepage"] != null)
+            if (Session["sessID"] != null)
             {
-                Response.Redirect(Session["homepage"].ToString());
+                Response.Redirect("Main.aspx");
             }
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             Session.Abandon();
-            Response.Redirect("main.aspx");
+            Response.Redirect("Main.aspx");
         }
     }
 }

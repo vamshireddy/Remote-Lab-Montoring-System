@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace labMonitoring
 {
@@ -15,32 +18,51 @@ namespace labMonitoring
         public WebForm1()
         {
             labs = new List<string>();
-            for (int i = 0; i < 10; i++)
-            {
-                labs.Add("Lab : "+(i + 1) + "");
-            }
+            labs.Add("CG");
+            labs.Add("OS");
+            labs.Add("SE");
+            labs.Add("NW");
+
             computers = new List<string>();
             for (int i = 0; i < 25; i++)
             {
-                computers.Add("System : "+(i + 1) + "");
+                computers.Add("PC-"+(i + 1) + "");
             }
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["homepage"] == null)
+            if (Session["sessID"] == null)
             {
                 Response.Redirect("main.aspx");
             }
-            DropDownList1.DataSource = labs;
-            DropDownList2.DataSource = computers;
-            DropDownList1.DataBind();
-            DropDownList2.DataBind(); 
+            if (!IsPostBack)
+            {
+                DropDownList1.DataSource = labs;
+                DropDownList2.DataSource = computers;
+                DropDownList1.DataBind();
+                DropDownList2.DataBind();
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("System_registration_succesfull.aspx");
+            // Store the values in database
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn_str"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("insert into Computer values('" + DropDownList2.SelectedItem.Text + "','" + TextBox1.Text + "','" + DropDownList1.SelectedItem.Text + "')", con);
+            con.Open();
+            int a = cmd.ExecuteNonQuery();
+            con.Close();
+            if (a <= 0)
+            {
+                Label3.Text = "Could not add the Computer. Please check your fields";    
+            }
+            else
+            {
+                Response.Redirect("System_registration_succesfull.aspx");
+                // Now add the Lab to the lab list
+                Global.populateLabs();
+            }
         }
 
         protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)

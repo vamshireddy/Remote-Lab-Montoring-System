@@ -1,0 +1,1 @@
+﻿insert into FacultyLogin values('vamshi','vamshi','vamshi');

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="System_registration_succesfull.aspx.cs" Inherits="labMonitoring.WebForm2" %>
+﻿<%@ Page Language="C#" Theme="Button_theme" AutoEventWireup="true" CodeBehind="System_registration_succesfull.aspx.cs" Inherits="labMonitoring.WebForm2" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:Label ID="Label1" runat="server" Font-Size="30pt" Text="You have succesfully added your PC to the Database"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Font-Size="20pt" Text="You have succesfully added your PC to the Database"></asp:Label>
         </div>
         <br />
         <asp:Button ID="Button1" runat="server" Text="Go to Home" OnClick="Button1_Click" Height="49px" Width="163px" />

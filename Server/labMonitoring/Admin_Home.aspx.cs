@@ -21,5 +21,10 @@ namespace labMonitoring
         {
             Response.Redirect("System_registration.aspx");
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("System_update.aspx");
+        }
     }
 }

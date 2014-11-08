@@ -60,9 +60,12 @@
     <Content Include="Admin_login.aspx" />
     <Content Include="Faculty_Home.aspx" />
     <Content Include="Faculty_login.aspx" />
+    <Content Include="Header.jpg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\7446A0A2C3FE.png" />
     <Content Include="Main.aspx" />
     <Content Include="Output_Page.aspx" />
+    <Content Include="System_update.aspx" />
     <Content Include="Unauthorized_access.aspx" />
     <Content Include="Web.config" />
     <Content Include="System_registration.aspx" />
@@ -113,6 +116,13 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="serverd.cs" />
+    <Compile Include="design.Master.cs">
+      <DependentUpon>design.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="design.Master.designer.cs">
+      <DependentUpon>design.Master</DependentUpon>
+    </Compile>
     <Compile Include="System_registration.aspx.cs">
       <DependentUpon>System_registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,6 +136,13 @@
     </Compile>
     <Compile Include="System_registration_succesfull.aspx.designer.cs">
       <DependentUpon>System_registration_succesfull.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="System_update.aspx.cs">
+      <DependentUpon>System_update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="System_update.aspx.designer.cs">
+      <DependentUpon>System_update.aspx</DependentUpon>
     </Compile>
     <Compile Include="Unauthorized_access.aspx.cs">
       <DependentUpon>Unauthorized_access.aspx</DependentUpon>
@@ -143,12 +160,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="design.Master" />
+    <Content Include="App_Themes\Button_theme\buttontheme.skin" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="XML\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

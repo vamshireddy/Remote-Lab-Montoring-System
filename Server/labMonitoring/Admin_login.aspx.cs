@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace labMonitoring
 {
@@ -13,6 +14,10 @@ namespace labMonitoring
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["sessID"] != null && Session["type"] == "admin")
+            {
+                Response.Redirect("Admin_Home.aspx");
+            }
             Label2.Visible = false;
         }
 
@@ -27,8 +32,8 @@ namespace labMonitoring
             String password = pass.Text;
             /*
              * Now validate the username and password */
-            SqlConnection con = new SqlConnection("data source=.;initial catalog=vamshi;user id=sa;password=sajalsuraj;integrated security=true");
-            SqlCommand cmd = new SqlCommand("select adminID from AdminLogin where adminID=@uname and password=@paswd",con);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn_str"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("select adminID from AdminLogin where adminID=@uname and adminPassword=@paswd",con);
             con.Open();
             cmd.Parameters.AddWithValue("uname", username);
             cmd.Parameters.AddWithValue("paswd", password);
@@ -47,6 +52,7 @@ namespace labMonitoring
                  * User name and password are correct
                  */
                 Session["sessID"] = username;
+                Session["type"] = "admin";
                 Response.Redirect("Admin_Home.aspx");
             }
             con.Close();

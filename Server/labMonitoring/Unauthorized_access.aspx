@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Unauthorized_access.aspx.cs" Inherits="labMonitoring.Unauthorized_access" %>
+﻿<%@ Page Language="C#" Theme="Button_theme" AutoEventWireup="true" CodeBehind="Unauthorized_access.aspx.cs" Inherits="labMonitoring.Unauthorized_access" %>
 
 <!DOCTYPE html>
 

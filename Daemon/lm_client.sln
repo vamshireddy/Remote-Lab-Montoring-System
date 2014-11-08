@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lm_client", "lm_client\lm_client.csproj", "{D8EAE548-0FE2-49DF-A6DA-56A02692BB7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8EAE548-0FE2-49DF-A6DA-56A02692BB7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8EAE548-0FE2-49DF-A6DA-56A02692BB7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8EAE548-0FE2-49DF-A6DA-56A02692BB7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8EAE548-0FE2-49DF-A6DA-56A02692BB7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

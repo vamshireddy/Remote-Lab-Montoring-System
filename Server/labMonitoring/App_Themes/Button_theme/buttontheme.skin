@@ -1,0 +1,21 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:RegularExpressionValidator runat="server" Font-Size="20pt" Font-Names="Century Gothic" ForeColor = "Red" />
+<asp:Button Font-Names="Century Gothic" runat = "server" SkinID="masterbuttons" ForeColor = "White" BackColor = "Blue"/>
+<asp:Button runat = "server" Font-Names="Century Gothic" ForeColor = "Black" BackColor = "Orange"/>
+<asp:Label  ForeColor = "Green" runat="server"  Font-Names="Century Gothic"/>
+<asp:RequiredFieldValidator runat="server"  Font-Size="20pt" Font-Names="Century Gothic" ForeColor = "Red" />
+<asp:DropDownList Height="47px" Width="312px" runat="server" BackColor="Black" ForeColor = "White" Font-Names="Century Gothic" />
